@@ -10,10 +10,10 @@
 
 <script id="siblingTemplate" type="text/x-handlebars-template">
     <div role="tabpanel" class="tab-pane {{active}}" id="{{coin}}">
-        <!-- Statistics -->
+        <!-- Estatisticas -->
         <div class="blocksStats row">
 
-            <!-- Total Blocks Mined -->
+            <!-- Total de Blocos Minerados -->
             <div class="col-lg-3 col-sm-4">
                 <div class="infoBox hoverExpandEffect mergedBg">
                     <div class="icon">
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <!-- Average Luck -->
+            <!-- Percentagem de Achar um Bloco -->
             <div class="col-lg-3 col-sm-4">
                 <div class="infoBox hoverExpandEffect mergedBg">
                     <div class="icon">
@@ -63,7 +63,7 @@
             </div>
 
         </div>
-         <!-- Chart -->
+         <!-- Gráfico -->
         <div id="blocksChart{{coin}}" class="card padding-15 padding-t-5 padding-b-5">
             <h4 id="blocksChartTitle{{coin}}">Blocks found</h4>
             <div class="chart" style="height:200px;">
@@ -71,7 +71,7 @@
                 <a class="chart-style"></a>
             </div>
         </div>
-        <!-- Report -->
+        <!-- Lista de Blocos -->
         <div class="card push-up-10">
             <div class="table-responsive blocksReport">
                 <table class="table table-hover table-striped">
@@ -107,7 +107,7 @@ $('#blocksChartiridium').hide();
 let displayedChart = {};
 let xhrGetBlocks = {}
 let ranOnce = false
-// Update current page
+// Atualizar página
 currentPage = {
     destroy: function(){
         if (xhrGetBlocks) {
