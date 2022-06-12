@@ -127,7 +127,7 @@
 </script>
 
 <script id="poolDetailTemplate" type="text/x-handlebars-template">
-    <!-- Connected Miners -->
+    <!-- Mineradores Conectados -->
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
@@ -144,7 +144,7 @@
         </div>
     </div>
 
-    <!-- Pool Fee -->
+    <!-- Taxa da Pool -->
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
@@ -170,7 +170,7 @@
         </div>
     </div>
 
-    <!-- Minimum Payout -->
+    <!-- Pagamento Minimo -->
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
@@ -183,7 +183,7 @@
         </div>
     </div>
 
-    <!-- Payment Interval -->
+    <!-- Intervalo entre Pagamento -->
     <div class="col-lg-3 col-sm-4">
         <div class="infoBox hoverExpandEffect">
             <div class="icon">
@@ -196,7 +196,7 @@
         </div>
     </div>
 
-    <!-- Last Hash -->
+    <!-- Endereço do Ultimo Bloco -->
     <div class="col-sm-12">
         <div class="hashInfo hoverExpandEffect">
             <div class="text"><span data-tkey="lastHash">Last Hash</span></div>
@@ -208,7 +208,7 @@
     </div>
 </script>
 
-<!-- Pool Charts -->
+<!-- Graficos da Pool -->
 <div class="row">
     <div class="col-sm-6 poolChart push-up-15">
         <h4><span data-tkey="hashRate">Hash Rate</span></h4>
@@ -238,7 +238,7 @@
 
 <!-- Javascript -->
 <script>
-// Update current page
+// Atualizar pagina
 let lastBlockFound = null
 
 currentPage = {
@@ -291,17 +291,17 @@ currentPage = {
     }
 };
 
-// Enable timeago on last block found
+// função para calcular tempo
 $('#networkLastBlockFound,#poolLastBlockFound').timeago();
 
 
-// Handle charts tooltip
+// gerir gráficos
 $(function() {
     $('[data-toggle="tooltip"]').tooltip();
 });
 
 
-// Render charts
+// gerar graficos
 var xhrRenderCharts;
 $(function(){
     xhrRenderCharts = $.ajax({
