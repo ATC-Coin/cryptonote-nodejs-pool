@@ -1,4 +1,4 @@
-<!-- Connection Details -->
+<!-- Detalhes da Ligação da Pool -->
 <div class="row">
     <div class="col-sm-6">
         <h3><span data-tkey="connectionDetails">Connection Details</span></h3>
@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <!-- Mining ports -->
+    <!-- Portas de Mineração -->
     <div class="col-sm-6">
         <h3><span data-tkey="miningPorts">Mining Ports</span></h3>
         <div class="card">
@@ -56,10 +56,10 @@
     
 </div>
 
-<!-- Mining Applications and Configuration Generator -->
+<!-- Aplicações de mineração e gerador para a configuração das mesmas -->
 <h3><span data-tkey="miningApps">Mining Applications</span></h3>
 
-<!-- Configuration Generator -->
+<!-- Gerador de configurações -->
 <div class="card padding-15">
     <p><span data-tkey="configGeneratorDesc">Generate your custom configuration to mine on our pool</span></p>
     <div id="configGenerator" class="row">
@@ -118,7 +118,7 @@
     </div>
 </div>
 
-<!-- Mining Applications -->
+<!-- Aplicações de mineração -->
 <div class="card push-up-5">
     <div id="miningApps" class="table-responsive">
         <table class="table">
@@ -300,7 +300,7 @@
 
 <!-- Javascript -->
 <script>
-// Cleanup mining ports
+// Limpar as portas de mineração
 var lastPortsJson = '';
 var $miningPorts = $('#miningPorts_rows');
 var miningPortTemplate = $miningPorts.html();
@@ -309,7 +309,7 @@ $miningPorts.empty();
 var $miningPortSelect = $('#gMiningPort');
 $miningPortSelect.empty();
 
-// Update current page
+// Atualizar a página
 currentPage = {
     destroy: function(){
     },
@@ -436,15 +436,15 @@ currentPage = {
 };
 
 /**
- * Configuration generator
+ * Gerador de configurações
  **/
 
 $('#generateConf').click(function() {
-    // Mining Port
+    //Porta
     var port = $('#gMiningPort').val();
     updateTextClasses('examplePort', port);
 
-    // Username
+    // Nome de Utilizador
     var address = $('#gAddress').val().replace(/\s+/g, '').trim();
     var childAddress = $('#gChildAddress').val().replace(/\s+/g, '').trim();
     var solo = $('#gSolo').val();
