@@ -1,4 +1,4 @@
-<!-- Worker Statistics -->
+<!-- Estatisticas dos Miners -->
 <h3><span data-tkey="minerStats">Your Stats & Payment History</span></h3>
 
 <ul class="nav nav-tabs" id="blocksTabs">
@@ -23,7 +23,7 @@
             </div>
             <div id="addressError{{coin}}"></div>
 
-            <!-- Hashrate -->
+            <!-- Poder de Porcessamento -->
             <div class="yourStats{{coin}} push-up-20">
                 <h4><i class="fa fa-dashboard"></i>&nbsp; <span data-tkey="hashRate">Hash Rate</span></h4>
             <div class="row card">
@@ -44,7 +44,7 @@
             </div>
             </div>
 
-            <!-- Payments -->
+            <!-- Pagamentos -->
             <div class="yourStats{{coin}} push-up-20">
                 <h4><i class="fa fa-money"></i>&nbsp; <span data-tkey="payments">Payments</span></h4>
                 <div class="row card">
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <!-- Workers -->
+            <!-- Miners -->
             <h4 class="yourStats{{coin}} yourWorkers{{coin}} push-up-20"><i class="fa fa-server"></i>&nbsp; <span data-tkey="workerStats">Workers Statistics</span></h4>
             <div class="yourStats{{coin}} yourWorkers{{coin}} card">
                 <div class="table-responsive workersReport{{coin}}">
@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <!-- Payments -->
+            <!-- Pagamentos -->
             <h4 class="yourStats{{coin}} push-up-20"><i class="fa fa-money"></i>&nbsp; <span data-tkey="paymentsHistory">Payments History</span></h4>
             <div class="yourStats{{coin}} card">
                 <div id="workerPayments{{coin}}" class="table-responsive">
@@ -127,7 +127,7 @@ let xhrGetPayments = {}
 let xhrAddressPoll = {}
 let addressTimeout = {}
 let ranOnce = false
-// Update current page
+// Atualiza a página
 currentPage = {
     destroy: function(){
         $(`#yourLastShare${lastStats.config.coin}`).timeago('dispose');
@@ -179,7 +179,7 @@ function RunOnce() {
     return true
 }
 
-// Charts settings
+// definições de gráfico
 var graphSettings = {
     type: 'line',
     width: '100%',
@@ -196,7 +196,7 @@ var graphSettings = {
     tooltipFormat: '<b>{{y}}</b> &ndash; {{offset:names}}'
 };
 
-// Handle charts tooltip
+// gerir gráfico
 $(function() {
     $('[data-toggle="tooltip"]').tooltip();
 });
