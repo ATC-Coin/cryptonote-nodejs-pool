@@ -11,7 +11,7 @@
     <li id="blockTabs{{coin}} role="presentation" class="{{active}}"><a href="#{{coin}}">{{coin}} {{symbol}}</a></li>
 </script>
 
-<!-- Calculo de retorno -->
+<!-- Calculo -->
 <script id="siblingMarketTemplate" type="text/x-handlebars-template">
     <div role="tabpanel" class="tab-pane {{active}}" id="{{coin}}">
         <div id="marketStats{{coin}}" class="row">
@@ -40,7 +40,7 @@
 </script>
 
 <script id="siblingCalculatorTemplate" type="text/x-handlebars-template">    
-    <!-- Mining Profit Calculator -->
+    <!-- Calculo do Retorno da Mineração -->
     <div id="miningProfitCalc{{coin}}">
         <h3><span data-tkey="estimateProfit">Estimate Mining Profits</span></h3>
         <div id="calcHashHolder">
@@ -69,7 +69,7 @@
 
 <!-- Javascript -->
 <script>
-// Market settings
+// Definições
 let priceSource = 'cryptonator';
 let priceCurrency = 'USD';
 
@@ -77,7 +77,7 @@ if (typeof cryptonatorWidget !== 'undefined' && typeof marketCurrencies === 'und
     let marketCurrencies = cryptonatorWidget;
 }
 
-// Charts initialized
+// Gráficos
 let chartsInitialized = {}
 let loadedData = {}
 let intervalChartsUpdate = {}
@@ -85,7 +85,7 @@ let ranOnce = false
 let xhrMarketGets = {}
 let marketPrices = {}
 let currencyPairs = {}
-// Update current page
+// Atualizar Página
 currentPage = {
     destroy: function(){
         if (chartsInitialized) {
@@ -113,10 +113,10 @@ currentPage = {
 function RunOnce() {
 
     /**
-     * Hash Profitability Calculator
+     * Calcular a probabilidade com o poder de processamento do utiizador
      **/
      
-    // Automatically update profit calculation on key press
+    //Atualizar automaticamente o retorno
     $('#calcHashRate')
         .keyup((e) => {
                 market_CalcEstimateProfit(marketPrices)
@@ -126,7 +126,7 @@ function RunOnce() {
         })
 
 
-    // Click on button
+    // Clicar no botão
     $('#calcHashUnits > li > a').click(function(e){
         e.preventDefault();
         $('#calcHashUnit').text($(this).text()).data('mul', $(this).data('mul'));
